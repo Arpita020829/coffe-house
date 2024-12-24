@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body><header>
+    <section class="container">
+    <h1>Coffee House</h1>
+    <nav>
+    <ul class="nav-list">
+        <li>Home</a></li>
+        <li>Catalogue</li>
+        <li>Contact Us</li>
+    </ul></nav>
+    </section></header>
+    <section class="slide" id="h">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="s1" src="https://mytastycurry.com/wp-content/uploads/2020/04/Cafe-style-cold-coffee-with-icecream.jpg">
+                <img id="s2" src="https://ikneadtoeat.com/wp-content/uploads/2021/08/cold-coffee-with-ice-cream-1-720x1080.jpg">
+                <img id="s4" src="https://th.bing.com/th/id/R.91b8d00ad03f6adef6cf7125740d5499?rik=VCTh8vTO5EY5RQ&riu=http%3a%2f%2fwww.ffactor.com%2fwp-content%2fuploads%2f2018%2f08%2fAdobeStock_202756131.jpeg&ehk=psyxmQ%2fogP7kPf5r0bj7wwbaDI4aAwg2yCTM6AMuUuI%3d&risl=1&pid=ImgRaw&r=0">
+                <img id="s5" src="https://th.bing.com/th/id/OIP.TDRRFBxg6mnYsnfLGLuXsAHaE8?rs=1&pid=ImgDetMain">
+                <img id="s6" src="https://www.recipetineats.com/wp-content/uploads/2023/06/Affogato_0.jpg?resize=80">
+            </div>
+        </div>
+    </section>
+    <section class="head" id="heads">
+        <div class="head-selection" >
+            <h2>
+                Find our best recipes
+            </h2>
+            <p>Search what you want to relish.</p>
+            <form class="search-box">
+                <input type="text" placeholder="Search Recipes" id="search" oninput="searchrecipes()">
+                <button type="submit">Search</button>
+            </form>
+    
+        </div>
+    
+        <section class="cat">
+            <div class="cat-card" data-recipe="Cold Coffe">
+                <img src="https://mytastycurry.com/wp-content/uploads/2020/04/Cafe-style-cold-coffee-with-icecream.jpg" alt="">
+                <h2>Cold Coffee</h2>
+                <a href="./b1.html">Order</a>
+            </div>
+            <div class="cat-card" data-recipe="Paneer Butter Masala">
+                <img src="https://ikneadtoeat.com/wp-content/uploads/2021/08/cold-coffee-with-ice-cream-1-720x1080.jpg" alt="">
+                <h2>Cold Coffee with Ice-cream</h2>
+                <a href="">Order</a>
+            </div>
+            <div class="cat-card" data-recipe="Iced Americano">
+                <img src="https://mocktail.net/wp-content/uploads/2022/05/homemade-Iced-Americano-recipe_5-900x1350.jpg" alt="">
+                <h2>Iced Americano</h2>
+                <a href="">Order</a>
+            </div>
+            <div class="cat-card" data-recipe="Cappucino">
+                <img src="https://th.bing.com/th/id/R.91b8d00ad03f6adef6cf7125740d5499?rik=VCTh8vTO5EY5RQ&riu=http%3a%2f%2fwww.ffactor.com%2fwp-content%2fuploads%2f2018%2f08%2fAdobeStock_202756131.jpeg&ehk=psyxmQ%2fogP7kPf5r0bj7wwbaDI4aAwg2yCTM6AMuUuI%3d&risl=1&pid=ImgRaw&r=0" alt="">
+                <h2>Cappuccino</h2>
+                <a href="">Order</a>
+            </div>
+            <div class="cat-card" data-recipe="Latte">
+                <img src="https://th.bing.com/th/id/OIP.TDRRFBxg6mnYsnfLGLuXsAHaE8?rs=1&pid=ImgDetMain">
+                <h2>Latte</h2>
+                <a href="">Order</a>
+            </div>
+            <div class="cat-card" data-recipe="Affagato">
+                <img src="https://www.recipetineats.com/wp-content/uploads/2023/06/Affogato_0.jpg?resize=80" alt="">
+                <h2>Affagato</h2>
+                <a href="">Order</a>
+            </div>
+        </div>
+        
+                
+              
+        </section>
+    </section>
+    <footer class="page-footer">
+        <p>
+          &copy; <span id="date"></span>
+          <span class="footer-logo">Find My COOKS</span>
+        </p>
+      </footer>
+    <script>
+        function searchrecipes() {
+                 const input = document.getElementById('search').value.toLowerCase();
+                 const recipeCards = document.querySelectorAll('.cat-card');
+     
+                 recipeCards.forEach(function(card) {
+                     const recipeName = card.getAttribute('data-recipe').toLowerCase();
+                     
+                     
+                     if (recipeName.includes(input)) {
+                         card.style.display = 'inline-block'; 
+                     } else {
+                         card.style.display = 'none';  
+                     }
+                 });
+        }
+        </script>
+</body>
+</html>
